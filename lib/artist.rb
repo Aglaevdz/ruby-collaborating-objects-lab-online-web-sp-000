@@ -31,7 +31,6 @@ class Artist
     end
     else
       new_artist = Artist.new(name)
-      new_artist
     end
   end
 
