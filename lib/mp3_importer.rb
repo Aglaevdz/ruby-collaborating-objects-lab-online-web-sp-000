@@ -8,17 +8,11 @@ class MP3Importer
   end
 
   def files
-     @files = []
-     file = Dir.enteries(@path)
-     file.each do |file|
-       if file.include?("mp3")
-         @files << files
-      end
+    Dir.entries(filepath).reject{|f| f == '.' || f == '..'}
   end
-  @files
 
   def import
     files.each {|f| Song.new_by_filename(f)}
   end
-end
+
 end
