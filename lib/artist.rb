@@ -37,3 +37,4 @@ end
     self.songs.each { |song| puts song.name }
   end
 end
+end
